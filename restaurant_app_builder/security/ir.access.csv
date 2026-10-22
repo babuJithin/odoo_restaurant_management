@@ -1,0 +1,8 @@
+id,name,model_id,group_id/id,operation,domain
+access_color_info_user,name_color_info_user,color.info,base.group_everyone,crud,
+access_app_image_attachments_user,name_app_image_attachments_user,app.image.attachments,base.group_everyone,crud,
+access_banner_element,view.banner.element,banner.element,base.group_everyone,crud,
+access_deal_element,view.deal.element,deal.element,base.group_everyone,crud,
+access_banner_element_item,view.banner.element.item,banner.element.item,base.group_everyone,crud,
+access_res_partner_model,view.res.partner.model,res.partner,base.group_everyone,crud,
+access_payment_type_model,view.payment.type.model,payment.type,base.group_everyone,crud,

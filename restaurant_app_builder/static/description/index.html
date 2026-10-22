@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Odoo E-commerce Application Builder </title>
+      <!-- Font Awesome CDN for Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+      <style>
+         /* General Styles */
+         body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9fbff;
+         }
+      </style>
+   </head>
+
+   <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+      <div class="main-body">
+         <section class="container text-center">
+            <div class="row">
+               <h2 class="slogan" style="color:#2f266c;font-weight: 500;">Restaurant Food Ordering Application</h2>
+               <p style="text-align: center;font-size: 20px;color:#3e3938">
+                  Our restaurant food ordering application is designed to streamline operations for restaurants that
+                  serve customers through online orders. This solution offers a user-friendly interface for both
+                  restaurant staff and customers, enabling efficient order management, tracking, and delivery.
+                  Integrated seamlessly with Odoo's powerful backend, the application provides all the tools needed for
+                  running a successful food ordering system, from menu management to payment processing.
+               </p>
+            </div>
+         </section>
+         <section class="container text-center pb-5">
+            <div class="row">
+               <h4 class="oe_slogan" style="color:#2f266c;">1. Community</h4>
+               <h4 class="oe_slogan" style="color:#2f266c;">2. Enterprise</h4>
+               <h4 class="oe_slogan" style="color:#2f266c;">3. odoo sh</h4>
+            </div>
+         </section>
+         <!-- Features Highlight Section -->
+         <div class="container features-highlight text-center">
+            <h3>Features Highlight</h3>
+            <div class="row my-3 py-2" style="justify-content:center">
+               <!--                <div class="col-md-6 col-sm-6 feature-item p-1">
+                  <div class="box" style="background-color: #ebf1f3;border-radius: 12px;">
+                  <div class="row"><div class="col-md-3 col-sm-6 feature-item p-1">
+                     <img class="img img-responsive mx-4 my-4 mt-5" alt="not found" width="55" height="55" src="./images/booking.png">
+                  </div>
+                  <div class="col-md-9 col-sm-6 feature-item p-1" style="text-align: left;">
+                     <div class="box" style="padding:15px;">
+                         <h5 style="color: #3f8580;">Customizable UI/UX</h5>
+                         <ul><li><p>A fully customizable front-end design that allows merchants to match the app with their brand identity (colors, fonts, logos).  </p> 
+                         <li><p>Merchants can customize the entire user experience, from navigation flow to the home screen layout.</p></ul>
+                     </div>
+                  </div>
+                  </div></div>
+               </div> -->
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/ui-ux.png">
+                     <h5 style="color: #2f266c;">Customizable UI/UX</h5>
+                     <p>A simple, intuitive interface for both customers and staff, ensuring a smooth experience from
+                        food selection to order completion. </p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/user.png">
+                     <h5 style="color: #2f266c;">User Registration & Login</h5>
+                     <p>Customers can create an account and log in using email or social credentials to personalize
+                        their experience and track order history.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/prioritize.png">
+                     <h5 style="color: #2f266c;">Menu Management</h5>
+                     <p>A comprehensive system for restaurant owners to manage and update their menu with categories,
+                        descriptions, prices, and images of dishes.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/shopping.png">
+                     <h5 style="color: #2f266c;">Online Ordering</h5>
+                     <p>Customers can browse the menu, select dishes, customize orders (e.g., choosing portion sizes,
+                        add-ons), and place an order seamlessly.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/tracking.png">
+                     <h5 style="color: #2f266c;">Order Tracking</h5>
+                     <p>Real-time tracking allows customers to follow the status of their orders from preparation to
+                        delivery or pickup.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/batch-picking.png">
+                     <h5 style="color: #2f266c;">Inventory Management</h5>
+                     <p>A system to keep track of ingredient stock levels, preventing orders of items that are out of
+                        stock and ensuring kitchen efficiency.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/notification.png">
+                     <h5 style="color: #2f266c;">Push Notifications & Alerts</h5>
+                     <p>Automatic notifications are sent to customers regarding order confirmation, preparation updates,
+                        delivery status, and promotional messages.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/fast-delivery.png">
+                     <h5 style="color: #2f266c;">Delivery & Pickup Options</h5>
+                     <p>The app supports both delivery and in-store pickup, giving customers the flexibility to choose
+                        their preferred method when placing an order.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/payment.png">
+                     <h5 style="color: #2f266c;">Delivery Fee Management</h5>
+                     <p>The system calculates delivery fees based on customer location, ensuring correct charges and
+                        transparent pricing.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/direction.png">
+                     <h5 style="color: #2f266c;">Order History & Reordering</h5>
+                     <p>Customers can view their past orders and quickly reorder their favorite dishes with one click,
+                        enhancing repeat business.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/responsive.png">
+                     <h5 style="color: #2f266c;">Admin Dashboard</h5>
+                     <p>A backend interface for the restaurant owner or admin to monitor orders, manage menus, track
+                        inventory, and generate sales reports.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px;border-radius: 15px;background-color: #ecf6f9;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/kyc.png">
+                     <h5 style="color: #2f266c;">Customer Feedback System</h5>
+                     <p>Allows customers to rate their experience and leave feedback on individual dishes, enabling the
+                        restaurant to improve quality.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <section class="container" style="padding: 0% 0% 0% 4%;">
+            <div class="row pt-5 pb-5">
+               <h2 class="oe_slogan"
+                  style="text-align: left;opacity:0.6;font-size: 28px;font-weight: 600;margin: 0px !important;">
+               </h2>
+               <div class="row pt-5 pb-5">
+                  <img src="1.jpg" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="2.jpg" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="3.jpg" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="4.jpg" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="5.jpg" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <!-- <div class="row pt-5 pb-5">
+                  <img src="6.png" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="7.png" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="8.png" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div>
+               <div class="row pt-5 pb-5">
+                  <img src="9.png" alt="" style="width: 95%;box-shadow: 0px 0px 8px 0px #83a4dd;" />
+               </div> -->
+               <!--                <h3 class="oe_slogan" style="text-align: left;font-size: 18px;margin: 0px !important;">
+                  <b> 5) Users can check the bookings according to the beauticians:</b>
+               </h3> -->
+            </div>
+         </section>
+         <div class="container services-section text-center py-5 my-5">
+            <h2>Our Services</h2>
+            <div class="services-container row my-3 py-2" style="justify-content: center">
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/custom.png">
+                     <h4>Odoo Implementation</h4>
+                     <p>End-to-end Odoo implementation to meet your business needs.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/implementation.png">
+                     <h4>Odoo Customization</h4>
+                     <p>Custom solutions tailored to your unique requirements.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/customer-service.png">
+                     <h4>Odoo Support & Training</h4>
+                     <p>Comprehensive support and training to enhance your Odoo usage.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/hired.png">
+                     <h4>Hire an Odoo Developer</h4>
+                     <p>Get access to skilled Odoo developers for your project needs.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/technology.png">
+                     <h4>Odoo Integration</h4>
+                     <p>Integrate Odoo seamlessly with third-party apps and systems.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/cloud-server.png">
+                     <h4>Odoo Hosting & Cloud</h4>
+                     <p>Secure and scalable Odoo hosting solutions.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/schedule.png">
+                     <h4>Odoo Maintenance</h4>
+                     <p>Ensure smooth and uninterrupted operations.</p>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 feature-item p-1">
+                  <div class="box" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-4 my-4" alt="not found" width="55" height="55"
+                        src="./images/consultant.png">
+                     <h4>Odoo Consulting</h4>
+                     <p>Expert consulting to help you leverage Odoo for maximum efficiency.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="support-section support-section text-center pb-5">
+            <h2>Support &amp; Demo</h2>
+            <div class="support-content" style="display: inline-block; text-align: center;">
+               <div class="support-item" style="padding:10px 30px; margin:2px; background-color: #f9fcfd; width:500px;">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>90 Days Free Support Available</span>
+               </div>
+               <div class="support-item"
+                  style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 500px;">
+                  <i class="fas fa-ticket-alt"></i>
+                  <span>Create a support ticket <a href="https://people.infintor.com/contactus"
+                        target="_blank">people.infintor.com/contactus</a> </span>
+               </div>
+               <div class="support-item"
+                  style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 500px;">
+                  <i class="fas fa-envelope"></i>
+                  <span>Send an email to <a href="mailto:odoo@infintor.com">odoo@infintor.com</a></span>
+               </div>
+               <div class="support-item"
+                  style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 500px;">
+                  <i class="fas fa-globe"></i>
+                  <span>Visit <a href="https://www.infintor.com" target="_blank">www.infintor.com</a></span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+
+</html>

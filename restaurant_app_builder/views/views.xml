@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_type_form" model="ir.ui.view">
+        <field name="name">payment.type.form</field>
+        <field name="model">payment.type</field>
+        <field name="arch" type="xml">
+            <form string="Payment Type">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                            <field name="type"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="payment_type_type_tree" model="ir.ui.view">
+        <field name="name">payment.type.list</field>
+        <field name="model">payment.type</field>
+        <field name="arch" type="xml">
+            <list string="Payment Type">
+                <field name="name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_payment_type_view" model="ir.actions.act_window">
+        <field name="name">Payment Type</field>
+        <field name="res_model">payment.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_payment_type"
+              name="Payment Type"
+              action="action_payment_type_view"
+              parent="sale.menu_sale_config"
+              sequence="99"/>
+
+    <record id="restaurant_app_builder" model="ir.ui.view">
+        <field name="name">color.info.form</field>
+        <field name="model">color.info</field>
+        <field name="arch" type="xml">
+            <form string="Color Info">
+                <header/>
+                <sheet>
+                    <h1>
+                        <field name="name" required="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="backend_config" required="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="restaurant_app_builder_apps_colour_info_tree_view" model="ir.ui.view">
+        <field name="name">color.info.list</field>
+        <field name="model">color.info</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="backend_config"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_apps_color_info" model="ir.actions.act_window">
+        <field name="name">Color Info</field>
+        <field name="res_model">color.info</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="restaurant_app_builder_apps_colour_info_tree_view"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to Create a New Record.
+            </p>
+        </field>
+    </record>
+
+    <record id="restaurant_app_builder_app_image_attachments_form_view" model="ir.ui.view">
+        <field name="name">app.image.attachments.form</field>
+        <field name="model">app.image.attachments</field>
+        <field name="arch" type="xml">
+            <form string="Image Attachments">
+                <header/>
+                <sheet>
+                    <group string="Attachment Details">
+                        <field name="name"/>
+                        <field name="image_type" widget="selection"/>
+                        <field name="image_data" widget="image"/>
+                        <field name="image_data_attachment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="restaurant_app_builder_app_image_attachments_tree_view" model="ir.ui.view">
+        <field name="name">app.image.attachments.list</field>
+        <field name="model">app.image.attachments</field>
+        <field name="arch" type="xml">
+            <list string="App Image Attachments">
+                <field name="name"/>
+                <field name="image_type"/>
+                <field name="image_data" widget="image"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="app_image_attachments_action" model="ir.actions.act_window">
+        <field name="name">App Image Attachments</field>
+        <field name="res_model">app.image.attachments</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="restaurant_app_builder_app_image_attachments_tree_view"/>
+        <field name="help" type="html">
+            <p>Manage image attachments for the app.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_apps_color_info"
+              action="action_apps_color_info"
+              parent="spreadsheet_dashboard.spreadsheet_dashboard_menu_configuration"
+              name="Colour Configuration"
+              groups="base.group_user"
+              sequence="10"/>
+
+    <menuitem id="menu_app_image_attachments"
+              action="app_image_attachments_action"
+              parent="spreadsheet_dashboard.spreadsheet_dashboard_menu_configuration"
+              name="Image Attachments"
+              groups="base.group_user"
+              sequence="11"/>
+
+</odoo>

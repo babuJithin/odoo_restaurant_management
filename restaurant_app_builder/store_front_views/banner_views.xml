@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="category_form_inherit" model="ir.ui.view">
+            <field name="name">product.public.category.form</field>
+            <field name="model">product.public.category</field>
+            <field name="inherit_id" ref="website_sale.product_public_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="before">
+                    <field name="top_category"/>
+                    <field name="category_type"/>
+                </xpath>
+                <xpath expr="//field[@name='not_in_shop']" position="after">
+                    <field name="note"/>
+                    <field name="banner" widget="image"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <menuitem name="Storefront" id="base_menu_banner" sequence="101"/>
+
+        <!-- Banner element Form-->
+        <record id="banner_element_form" model="ir.ui.view">
+            <field name="name">banner.element</field>
+            <field name="model">banner.element</field>
+            <field name="arch" type="xml">
+                <form string="Banner Element">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <field name="name" class="oe_inline" string="Name"/>
+                        </h1>
+
+                        <group>
+                            <group>
+                                <field name="element_type" class="oe_inline"/>
+                                <field name="grid_count" class="oe_inline" invisible="scroll_type != 'grid'"/>
+                                <field name="scroll_type" class="oe_inline"/>
+                                <field name="sequence" class="oe_inline"/>
+                            </group>
+                            <group>
+                                <field name="banner_items" class="oe_inline" domain="[('element_type', '=', element_type)]" invisible="element_type == 'product'"/>
+                            </group>
+                            <group>
+                                <field name="product_ids" class="oe_inline" invisible="element_type != 'product'"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+
+        <!--    Skip Order List View-->
+        <record id="banner_element_tree" model="ir.ui.view">
+            <field name="name">banner.element.list</field>
+            <field name="model">banner.element</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="element_type"/>
+                </list>
+            </field>
+        </record>
+
+
+        <!--        Menu Action for Quotation-->
+        <record model='ir.actions.act_window' id='banner_element_act'>
+            <field name="name">Elements</field>
+            <field name="res_model">banner.element</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new banner element
+                </p>
+            </field>
+        </record>
+
+
+        <!--        Menu Items-->
+        <menuitem name="Elements" id="menu_banner" parent="restaurant_app_builder.base_menu_banner" sequence="1"/>
+
+        <menuitem id="menu_banner_view" name="Elements"
+                  parent="menu_banner" action="banner_element_act" sequence="1"/>
+
+        <record id="banner_element_item_form" model="ir.ui.view">
+            <field name="name">banner.element.item</field>
+            <field name="model">banner.element.item</field>
+            <field name="arch" type="xml">
+                <form string="Banner Element">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <field name="name" class="oe_inline" string="Name"/>
+                        </h1>
+
+                        <group>
+                            <group>
+                                <field name="element_type" class="oe_inline"/>
+                                <field name="product_wise" class="oe_inline"
+                                       invisible="category_wise == True or element_type in ('category',)"/>
+                                <field name="category_wise" class="oe_inline"
+                                       invisible="product_wise == True or element_type in ('category',)"/>
+                                <field name="color" class="oe_inline" placeholder="Eg: #6F2C1D"
+                                       invisible="element_type not in ('category',)"
+                                       required="element_type in ('category',)"/>
+                                <!-- <field name="url" invisible="1" readonly="1" force_save="1" class="oe_inline" attrs="{'invisible': [('element_type','in',('category'))]}"/> -->
+                            </group>
+                            <group>
+                                <field name="product_id" class="oe_inline" invisible="product_wise == False"
+                                       required="product_wise == True"/>
+
+                                <field name="categ_id" class="oe_inline" invisible="product_wise == True"/>
+                                <field name="categ_id_domain" class="oe_inline" invisible="1"/>
+                                <field name="sub_categ_ids" class="oe_inline" invisible="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="image" widget="image" class="oe_inline"
+                                       invisible="element_type in ('product',)"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+
+        <!--    Skip Order List View-->
+        <record id="banner_element_item_tree" model="ir.ui.view">
+            <field name="name">banner.element.item.list</field>
+            <field name="model">banner.element.item</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="element_type"/>
+                </list>
+            </field>
+        </record>
+
+
+        <!--        Menu Action for Quotation-->
+        <record model='ir.actions.act_window' id='banner_element_item_act'>
+            <field name="name">Elements Items</field>
+            <field name="res_model">banner.element.item</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create a new banner element items
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_banner_item_view" name="Element Items"
+                  parent="menu_banner" action="banner_element_item_act" sequence="2"/>
+
+    </data>
+</odoo>
